@@ -69,24 +69,27 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       <paper-scroll-header-panel main id="headerPanelMain" condenses keep-condensed-header>
         <!-- Main Toolbar -->
         <paper-toolbar id="mainToolbar" attr-for-selected="data-route" selected="[[route]]" class="tall">
-          <paper-icon-button id="paperToggle" icon="menu" paper-drawer-toggle></paper-icon-button>
+          <div class="bottom" style="width:100%;">
+            <a data-route="home" class="bottom" href="{{baseUrl}}" style="width: 20%;">
+              <span >Home</span>
+            </a>
 
-          <a data-route="home" href="{{baseUrl}}">
-            <iron-icon icon="home"></iron-icon>
-            <span>Home</span>
-          </a>
+            <a data-route="qlik" class="bottom" href="{{baseUrl}}qlik" style="width: 20%;">
+              <span>Qlik</span>
+            </a>
 
-          <a data-route="info" href="{{baseUrl}}info">
-            <iron-icon icon="info"></iron-icon>
-            <span>Info</span>
-          </a>
+            <a data-route="telefany" class="bottom"  href="{{baseUrl}}telefany" style="width: 20%;">
+              <span>Telefany</span>
+            </a>
 
-          <a data-route="contact" href="{{baseUrl}}contact">
-            <iron-icon icon="mail"></iron-icon>
-            <span>Contact</span>
-          </a>
-          <span class="space"></span>
+            <a data-route="healthcare" class="bottom"  href="{{baseUrl}}healthcare" style="width: 20%;">
+              <span>Healthcare</span>
+            </a>
 
+            <a data-route="loyalty-rewards" class="bottom" href="{{baseUrl}}loyalty-rewards" style="width: 20%;">
+              <span>Loyalty Rewards</span>
+            </a>
+          </div>
         </paper-toolbar>
 
         <!-- Main Content -->
@@ -107,16 +110,28 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               </paper-material>
             </section>
 
-            <section data-route="info">
+            <section data-route="qlik">
               <paper-material elevation="1">
-                <p class="subhead focus-target">I lied I have no info I know nothing</p>
+                <p class="subhead focus-target">Qlik</p>
               </paper-material>
             </section>
 
-            <section data-route="contact">
+            <section data-route="telefany">
               <paper-material elevation="1">
-                <h1 class="page-title focus-target" tabindex="-1">Contact</h1>
-                <p>This is the contact section</p>
+                <h1 class="page-title focus-target" tabindex="-1">Telefany</h1>
+                <p>This is the telefany section</p>
+              </paper-material>
+            </section>
+
+            <section data-route="healthcare">
+              <paper-material elevation="1">
+                <h1 class="page-title focus-target" tabindex="-1">healthcare</h1>
+              </paper-material>
+            </section>
+
+            <section data-route="loyalty-rewards">
+              <paper-material elevation="1">
+                <h1 class="page-title focus-target" tabindex="-1">loyalty-rewards</h1>
               </paper-material>
             </section>
           </iron-pages>
