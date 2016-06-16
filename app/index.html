@@ -1,4 +1,3 @@
-<!doctype html>
 <!--
 @license
 Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
@@ -64,29 +63,86 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <span id="browser-sync-binding"></span>
   <!-- endbuild -->
 
-  <!-- NATS SEARCH FOR ME -->
   <template is="dom-bind" id="app">
- 
-  <paper-menu attr-for-selected="data-route" selected="{{route}}">
-    <a data-route="home" href="/">
-      <paper-item data-route="home">Home</paper-item>
-    </a>
-    <a data-route="not-home" href="/not-home">
-      <paper-item data-route="not-home">Not Home</paper-item>
-    </a>
-  </paper-menu>
 
-  <iron-pages attr-for-selected="data-route" selected="{{route}}">
-    <section data-route="home">
-      <h1>Home</h1>
-      <div>Home Content</div>
-    </section>
+      <!-- Main Area -->
+      <paper-scroll-header-panel main id="headerPanelMain" condenses keep-condensed-header>
+        <!-- Main Toolbar -->
+        <paper-toolbar id="mainToolbar" attr-for-selected="data-route" selected="[[route]]" class="tall">
+          <paper-icon-button id="paperToggle" icon="menu" paper-drawer-toggle></paper-icon-button>
 
-    <section data-route="not-home">
-      <h2>Not Home</h2>
-      <div>NOT Home Content</div>
-    </section>
-  </iron-pages>
+          <a data-route="home" href="{{baseUrl}}">
+            <iron-icon icon="home"></iron-icon>
+            <span>Home</span>
+          </a>
+
+          <a data-route="info" href="{{baseUrl}}info">
+            <iron-icon icon="info"></iron-icon>
+            <span>Info</span>
+          </a>
+
+          <a data-route="contact" href="{{baseUrl}}contact">
+            <iron-icon icon="mail"></iron-icon>
+            <span>Contact</span>
+          </a>
+          <span class="space"></span>
+
+        </paper-toolbar>
+
+        <!-- Main Content -->
+        <div class="content">
+          <iron-pages attr-for-selected="data-route" selected="{{route}}">
+            <section data-route="home">
+              <paper-material elevation="1">
+                <my-greeting class="focus-target" tabindex="-1"></my-greeting>
+
+                <p class="subhead">You now have:</p>
+                <my-list></my-list>
+
+                <p>Looking for more Web App layouts? Check out our <a href="https://github.com/PolymerElements/app-layout-templates">layouts</a> collection. You can also <a href="http://polymerelements.github.io/app-layout-templates/">preview</a> them live.</p>
+              </paper-material>
+
+              <paper-material elevation="1">
+                <p>This is another card.</p>
+              </paper-material>
+            </section>
+
+            <section data-route="info">
+              <paper-material elevation="1">
+                <p class="subhead focus-target">I lied I have no info I know nothing</p>
+              </paper-material>
+            </section>
+
+            <section data-route="contact">
+              <paper-material elevation="1">
+                <h1 class="page-title focus-target" tabindex="-1">Contact</h1>
+                <p>This is the contact section</p>
+              </paper-material>
+            </section>
+          </iron-pages>
+        </div>
+      </paper-scroll-header-panel>
+
+    <paper-toast id="toast">
+      <span class="toast-hide-button" role="button" tabindex="0" onclick="app.$.toast.hide()">Ok</span>
+    </paper-toast>
+
+    <!-- Uncomment next block to enable Service Worker support (1/2) -->
+    
+    <paper-toast id="caching-complete"
+                 duration="6000"
+                 text="Caching complete! This app will work offline.">
+    </paper-toast>
+    <platinum-sw-register auto-register
+                          clients-claim
+                          skip-waiting
+                          base-uri="bower_components/platinum-sw/bootstrap"
+                          on-service-worker-installed="displayInstalledToast">
+      <platinum-sw-cache default-cache-strategy="fastest"
+                         cache-config-file="cache-config.json">
+      </platinum-sw-cache>
+    </platinum-sw-register>
+    
 
   </template>
 
