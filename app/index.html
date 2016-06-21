@@ -16,6 +16,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="generator" content="Polymer Starter Kit">
   <title>Polymer Starter Kit</title>
+  <link rel="stylesheet" type"text/css" href="styles/mystylesheet.css">
 
   <!-- Place favicon.ico in the `app/` directory -->
 
@@ -68,27 +69,31 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       <!-- Main Area -->
       <paper-scroll-header-panel main id="headerPanelMain" condenses keep-condensed-header>
         <!-- Main Toolbar -->
-        <paper-toolbar id="mainToolbar" attr-for-selected="data-route" selected="[[route]]" class="tall">
+        <paper-toolbar id="mainToolbar" attr-for-selected="data-route" selected="[[route]]" class="medium-tall">
+          <div style="background-image: url(./images/temp_banner.png); height: 60px; width: 400px; border: 1px solid black;" class="top"></div>
+
           <div class="bottom" style="width:100%;">
-            <a data-route="home" class="bottom" href="{{baseUrl}}" style="width: 20%;">
+            <ul id="MyNavList">
+            <li><a data-route="home" class="bottom NavLinks" href="{{baseUrl}}" style="width: 20%;">
               <span >Home</span>
-            </a>
+            </a></li>
 
-            <a data-route="qlik" class="bottom" href="{{baseUrl}}qlik" style="width: 20%;">
+            <li><a data-route="qlik" class="bottom NavLinks" href="{{baseUrl}}qlik" style="width: 20%;">
               <span>Qlik</span>
-            </a>
+            </a></li>
 
-            <a data-route="telefany" class="bottom"  href="{{baseUrl}}telefany" style="width: 20%;">
+            <li><a data-route="telefany" class="bottom NavLinks"  href="{{baseUrl}}telefany" style="width: 20%;">
               <span>Telefany</span>
-            </a>
+            </a></li>
 
-            <a data-route="healthcare" class="bottom"  href="{{baseUrl}}healthcare" style="width: 20%;">
+            <li><a data-route="healthcare" class="bottom NavLinks"  href="{{baseUrl}}healthcare" style="width: 20%;">
               <span>Healthcare</span>
-            </a>
+            </a></li>
 
-            <a data-route="loyalty-rewards" class="bottom" href="{{baseUrl}}loyalty-rewards" style="width: 20%;">
+            <li><a data-route="loyalty-rewards" class="bottom NavLinks" href="{{baseUrl}}loyalty-rewards" style="width: 20%;">
               <span>Loyalty Rewards</span>
-            </a>
+            </a></li>
+          </ul>
           </div>
         </paper-toolbar>
 

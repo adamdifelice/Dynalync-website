@@ -1,0 +1,21 @@
+#MyNavList > li{
+	display:inline-block;
+	width:19%;
+}
+
+#MyNavList{
+	padding: 13px;
+	text-align: center;
+}
+
+
+.NavLinks{
+	color:white;
+	font-family: "Stencil";
+	text-decoration: none;
+	font-size: 23px;
+}
+
+#bottomBar{
+	background-color: #0000CD;
+}
