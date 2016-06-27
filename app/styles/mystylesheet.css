@@ -1,5 +1,39 @@
 :root {
-	--nav-bar-background-color: #CD0000;
+	--nav-bar-background-color: #1CA6CA;
+	--nav-bar-hover: #494343;
+
+}
+
+#NavBar ul li a, 
+#NavBar ul li a:after
+#NavBar ul li a:before{
+	-webkit-transition:all 2s;
+}
+
+#NavBar ul li a:hover {
+  color: var(--nav-bar-hover);
+  font-weight: 800;
+}
+
+#NavBar.stroke ul li a{
+  position: relative;
+}
+
+#NavBar.stroke ul li a:after{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: var(--nav-bar-hover);
+  height: 2px;
+}
+
+#NavBar.stroke ul li a:hover:after {
+  width: 100%;
 }
 
 #NavBar {
@@ -8,7 +42,7 @@
 
 #MyNavList > li{
 	display:inline-block;
-	width:19%;
+	width:13%;
 }
 
 #MyNavList {
@@ -17,14 +51,15 @@
 }
 
 #MyNavList > li > a {
-	width:20%;
+	width:16.66666666666%;
 }
 
 .NavLinks{
 	color:white;
-	font-family: "Stencil";
+	font-family: 'Roboto', sans-serif;
+	text-transform: uppercase;
 	text-decoration: none;
-	font-size: 23px;
+	font-size: 19px;
 }
 
 #bottomBar{
@@ -32,8 +67,39 @@
 }
 
 #banner {
-	background-image: url(../images/temp_banner.png);
-	height: 60px;
-	width: 400px;
+
+}
+
+#topBar {
+	height: 250px;
+	background-image: url(../images/stock.jpg);
+	background-size: cover;
 	border: 1px solid black;
+}
+
+#mainToolbar {
+	height:200px;
+}
+
+#topBar {
+	height:145px;
+}
+
+#bottomBar {
+	height: 55px;
+}
+
+@media (max-width: 600px) {
+	#mainToolbar {
+		height:55px;
+	}
+
+	#topBar {
+		display: none;
+		height:0px;
+	}
+
+	#bottomBar {
+		height: 55px;
+	}
 }
