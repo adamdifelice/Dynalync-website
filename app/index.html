@@ -70,27 +70,27 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       <paper-scroll-header-panel main id="headerPanelMain" condenses keep-condensed-header>
         <!-- Main Toolbar -->
         <paper-toolbar id="mainToolbar" attr-for-selected="data-route" selected="[[route]]" class="medium-tall">
-          <div style="background-image: url(./images/temp_banner.png); height: 60px; width: 400px; border: 1px solid black;" class="top"></div>
+          <div id="banner" class="top"></div>
 
-          <div class="bottom" style="width:100%;">
+          <div class="bottom" id="NavBar">
             <ul id="MyNavList">
-            <li><a data-route="home" class="bottom NavLinks" href="{{baseUrl}}" style="width: 20%;">
+            <li><a data-route="home" class="bottom NavLinks" href="{{baseUrl}}">
               <span >Home</span>
             </a></li>
 
-            <li><a data-route="qlik" class="bottom NavLinks" href="{{baseUrl}}qlik" style="width: 20%;">
+            <li><a data-route="qlik" class="bottom NavLinks" href="{{baseUrl}}qlik">
               <span>Qlik</span>
             </a></li>
 
-            <li><a data-route="telefany" class="bottom NavLinks"  href="{{baseUrl}}telefany" style="width: 20%;">
-              <span>Telefany</span>
+            <li><a data-route="telephany" class="bottom NavLinks"  href="{{baseUrl}}telephany">
+              <span>Telephany</span>
             </a></li>
 
-            <li><a data-route="healthcare" class="bottom NavLinks"  href="{{baseUrl}}healthcare" style="width: 20%;">
+            <li><a data-route="healthcare" class="bottom NavLinks"  href="{{baseUrl}}healthcare">
               <span>Healthcare</span>
             </a></li>
 
-            <li><a data-route="loyalty-rewards" class="bottom NavLinks" href="{{baseUrl}}loyalty-rewards" style="width: 20%;">
+            <li><a data-route="loyalty-rewards" class="bottom NavLinks" href="{{baseUrl}}loyalty-rewards">
               <span>Loyalty Rewards</span>
             </a></li>
           </ul>
@@ -121,10 +121,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               </paper-material>
             </section>
 
-            <section data-route="telefany">
+            <section data-route="telephany">
               <paper-material elevation="1">
-                <h1 class="page-title focus-target" tabindex="-1">Telefany</h1>
-                <p>This is the telefany section</p>
+                <h1 class="page-title focus-target" tabindex="-1">Telephany</h1>
+                <p>This is the telephany section</p>
               </paper-material>
             </section>
 

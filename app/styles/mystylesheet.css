@@ -1,13 +1,24 @@
+:root {
+	--nav-bar-background-color: #CD0000;
+}
+
+#NavBar {
+	width: 100%;
+}
+
 #MyNavList > li{
 	display:inline-block;
 	width:19%;
 }
 
-#MyNavList{
+#MyNavList {
 	padding: 13px;
 	text-align: center;
 }
 
+#MyNavList > li > a {
+	width:20%;
+}
 
 .NavLinks{
 	color:white;
@@ -17,5 +28,12 @@
 }
 
 #bottomBar{
-	background-color: #0000CD;
+	background-color: var(--nav-bar-background-color);
+}
+
+#banner {
+	background-image: url(../images/temp_banner.png);
+	height: 60px;
+	width: 400px;
+	border: 1px solid black;
 }
