@@ -7,12 +7,20 @@
 #NavBar ul li a, 
 #NavBar ul li a:after
 #NavBar ul li a:before{
-	-webkit-transition:all 2s;
+	transition:all 2s ease-out;
 }
 
+/*I ADDED THIS TRANSITION because above didnt work*/
 #NavBar ul li a:hover {
   color: var(--nav-bar-hover);
   font-weight: 800;
+  transition:all 1s ease-out;
+  
+}
+
+/*I ADDED THIS*/
+ul li :hover {
+	background-color: white;
 }
 
 #NavBar.stroke ul li a{
@@ -72,7 +80,7 @@
 
 #topBar {
 	height: 250px;
-	background-image: url(../images/stock.jpg);
+	background-image: url(../images/DLBanner.png);
 	background-size: cover;
 	border: 1px solid black;
 }
