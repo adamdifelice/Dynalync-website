@@ -4,30 +4,24 @@
 
 }
 
-#NavBar ul li a, 
-#NavBar ul li a:after
-#NavBar ul li a:before{
-	transition:all 2s ease-out;
-}
-
 /*I ADDED THIS TRANSITION because above didnt work*/
 #NavBar ul li a:hover {
   color: var(--nav-bar-hover);
-  font-weight: 800;
-  transition:all 1s ease-out;
-  
+  transition:all 1s ease-out; 
 }
 
 /*I ADDED THIS*/
-ul li :hover {
+ul li a:hover {
 	background-color: white;
 }
 
-#NavBar.stroke ul li a{
+#NavBar ul li a{
+  display:block;
+  padding-top:20px;
   position: relative;
 }
 
-#NavBar.stroke ul li a:after{
+#NavBar ul li a:after{
   position: absolute;
   bottom: 0;
   left: 0;
@@ -50,7 +44,7 @@ ul li :hover {
 
 #MyNavList > li{
 	display:inline-block;
-	width:13%;
+	width:12%;
 }
 
 #MyNavList {
@@ -58,30 +52,18 @@ ul li :hover {
 	text-align: center;
 }
 
-#MyNavList > li > a {
-	width:16.66666666666%;
-}
-
 .NavLinks{
 	color:white;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Futura', sans-serif;
 	text-transform: uppercase;
 	text-decoration: none;
-	font-size: 19px;
-}
-
-#bottomBar{
-	background-color: var(--nav-bar-background-color);
-}
-
-#banner {
-
+	font-size: 25px;
 }
 
 #topBar {
-	height: 250px;
+	height: 75%;
 	background-image: url(../images/DLBanner.png);
-	background-size: cover;
+	background-size: 100%  100%;
 	border: 1px solid black;
 }
 
@@ -89,12 +71,9 @@ ul li :hover {
 	height:200px;
 }
 
-#topBar {
-	height:145px;
-}
-
 #bottomBar {
-	height: 55px;
+	height: 25%;
+	background-color: var(--nav-bar-background-color);
 }
 
 @media (max-width: 600px) {
