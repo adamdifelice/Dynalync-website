@@ -17,7 +17,7 @@ ul li a:hover {
 
 #NavBar ul li a{
   display:block;
-  padding-top:20px;
+  padding-top: 15px;
   position: relative;
 }
 
@@ -39,17 +39,22 @@ ul li a:hover {
 }
 
 #NavBar {
+	height:100%;
 	width: 100%;
 }
 
 #MyNavList > li{
 	display:inline-block;
-	width:12%;
+	width:200px;
+	height: 100%;
 }
 
 #MyNavList {
 	padding: 13px;
 	text-align: center;
+	margin:0px;
+	padding: 0px;
+	height:100%;
 }
 
 .NavLinks{
