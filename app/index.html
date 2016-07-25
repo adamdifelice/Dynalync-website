@@ -69,50 +69,52 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       <!-- Main Area -->
       <paper-scroll-header-panel main id="headerPanelMain" condenses keep-condensed-header>
         <!-- Main Toolbar -->
-        <paper-toolbar id="mainToolbar" attr-for-selected="data-route" selected="[[route]]" class="medium-tall">
+        <div id="test">
+          <paper-toolbar id="mainToolbar" attr-for-selected="data-route" selected="[[route]]" class="medium-tall">
 
-          <div class="bottom stroke" id="NavBar">
-            <ul id="MyNavList">
+            <div class="bottom stroke" id="NavBar">
+              <ul id="MyNavList">
 
-              <li>
-                <a data-route="home" class="bottom NavLinks" href="{{baseUrl}}">
-                  <span >Home</span>
-                </a>
-              </li>
+                <li>
+                  <a data-route="home" class="bottom NavLinks" href="{{baseUrl}}">
+                    <span >Home</span>
+                  </a>
+                </li>
 
-              <li>
-                <a data-route="qlik" class="bottom NavLinks" href="{{baseUrl}}qlik">
-                  <span>Qlik</span>
-                </a>
-              </li>
+                <li>
+                  <a data-route="qlik" class="bottom NavLinks" href="{{baseUrl}}qlik">
+                    <span>Qlik</span>
+                  </a>
+                </li>
 
-              <li>
-                <a data-route="telephany" class="bottom NavLinks"  href="{{baseUrl}}telephany">
-                  <span>Telephany</span>
-                </a>
-              </li>
+                <li>
+                  <a data-route="telephany" class="bottom NavLinks"  href="{{baseUrl}}telephany">
+                    <span>Telephany</span>
+                  </a>
+                </li>
 
-              <li>
-                <a data-route="healthcare" class="bottom NavLinks"  href="{{baseUrl}}healthcare">
-                  <span>Healthcare</span>
-                </a>
-              </li>
+                <li>
+                  <a data-route="healthcare" class="bottom NavLinks"  href="{{baseUrl}}healthcare">
+                    <span>Healthcare</span>
+                  </a>
+                </li>
 
-              <li>
-                <a data-route="loyalty-rewards" class="bottom NavLinks" href="{{baseUrl}}loyalty-rewards">
-                  <span>Rewards</span>
-                </a>
-              </li>
+                <li>
+                  <a data-route="loyalty-rewards" class="bottom NavLinks" href="{{baseUrl}}loyalty-rewards">
+                    <span>Rewards</span>
+                  </a>
+                </li>
 
-              <li>
-                <a class="bottom NavLinks">
-                  <span>Contact Us</span>
-                </a>
-              </li>
+                <li>
+                  <a class="bottom NavLinks">
+                    <span>Contact Us</span>
+                  </a>
+                </li>
 
-            </ul>
-          </div>
-        </paper-toolbar>
+              </ul>
+            </div>
+          </paper-toolbar>
+        </div>
 
         <!-- Main Content -->
         <div class="content">
